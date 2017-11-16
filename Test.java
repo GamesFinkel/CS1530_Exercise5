@@ -7,7 +7,6 @@ public class Test
   public static long iter = 0;
   public static void main(String[] args)
   {
-    long startTime = System.nanoTime();
     long numT = 0;
     long numI = 0;
     AtomicInteger inside = new AtomicInteger();
@@ -58,10 +57,5 @@ public class Test
     System.out.println("Inside = "+inside);
     System.out.println("Ratio = "+((double)inside.longValue()/(double)numI));
     System.out.println("Pi = "+(4.0*inside.longValue()/numI));
-
-    long endTime = System.nanoTime();
-
-    double duration = (endTime - startTime)/1000000000.0;
-    System.out.println("\nTime = "+duration);
   }
 }
